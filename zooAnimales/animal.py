@@ -3,12 +3,12 @@ import zooAnimales
 class Animal:
 
     _totalAnimales = 0
+    _zona = ""
     
-    def __init__ (self, nombre = None, edad = 0, habitat = None, genero = None, zona = None):
+    def __init__ (self, nombre, edad, habitat, genero, zona):
         self._nombre = nombre
         self._edad = edad
         self._habitat = habitat
-        self._zona = zona
         self._genero = genero
         Animal._totalAnimales += 1
 
@@ -16,8 +16,8 @@ class Animal:
         return "desplazarse"
     
     @staticmethod
-    def totalPorTipo(cls):
-        return "Mamiferos: " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves: " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles: " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces: " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios: " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
+    def totalPorTipo():
+        return "Mamiferos : " + str(zooAnimales.mamifero.Mamifero.cantidadMamiferos()) + "\nAves : " + str(zooAnimales.ave.Ave.cantidadAves()) + "\nReptiles : " + str(zooAnimales.reptil.Reptil.cantidadReptiles()) + "\nPeces : " + str(zooAnimales.pez.Pez.cantidadPeces()) + "\nAnfibios : " + str(zooAnimales.anfibio.Anfibio.cantidadAnfibios())
     
     def toString(self):
         if self._zona != None:

@@ -6,7 +6,7 @@ class Anfibio(Animal):
     salamandras = 0
     _listado = []
 
-    def __init__ (self, nombre = None, edad = 0, habitat = None, genero = None, colorPiel = None, venenoso = False):
+    def __init__ (self, nombre, edad, habitat, genero, colorPiel, venenoso):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPiel = colorPiel
         self._venenoso = venenoso
